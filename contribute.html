@@ -124,10 +124,12 @@
                 placeholder="write your full project description here"></textarea>
             <br><br>
             <div class="upload-btn">
-                Upload a video related to your project: <br>
-                <div class="button-wrapvideo">
-                    <label class="button-video" for="upload-video">Upload File</label>
-                    <input type="file" id="upload-video" name="video" title="upload video">
+                Upload images related to your project: <br>
+                <div class="button-wrapimage">
+                    <form enctype="multipart/form-data">
+                    <label class="button-image" for="upload-image">Upload images</label>
+                    <input type="file" id="upload-image" name="video" title="upload image" multiple>
+                    </form>
                 </div>
             </div>
 
@@ -147,7 +149,7 @@
                 <li>Get suggestions and bug-checks here for free.</li>
                 <li>you can update your project anytime later. </li>
                 <li>content copying is strictly prohibited.</li>
-                <li>You can upload a video tutorial too, to brief your project. </li>
+                <li>You can upload images to show your project. </li>
             </div>
         </div>
         <div id="input-submit">
@@ -264,11 +266,11 @@
 
         }
 
-        .button-wrapvideo {
+        .button-wrapimage {
             position: relative;
         }
 
-        .button-video {
+        .button-image {
             display: inline-block;
             padding: 12px 18px;
             cursor: pointer;
