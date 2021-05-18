@@ -85,19 +85,19 @@
         <hr class="hr"><br>
         <div id="details">
             <div>
-                <input class="gap-ph" id="name" style="width: 38%;" type="text" name="Project-name"
-                    placeholder="Project-name" required>
+                <input class="gap-ph" id="name" style="min-width: 350px !important; width: 38%;" type="text"
+                    name="Project-name" placeholder="Project-name" required>
             </div>
             <br>
             <div>
-                <input class="gap-ph" id="link" style="width: 38%;" type="link" name="Project-link"
-                    placeholder="Add-Link" required>
+                <input class="gap-ph" id="link" style="min-width: 350px !important; width: 38%;" type="link"
+                    name="Project-link" placeholder="Add-Link" required>
             </div>
 
             <br><br>
 
             <div>
-                <select class="gap-ph" id="select" style="width: 38%;" name="type">
+                <select class="gap-ph" id="select" style="min-width: 350px !important; width: 38%;" name="type">
                     <option disabled selected value> -- select an option -- </option>
                     <option>Coding</option>
                     <option>Games</option>
@@ -108,7 +108,7 @@
             </div>
             <br>
             <div>
-                <input class="gap-hp" type="email" style="width: 38%;" value="" disabled>
+                <input class="gap-hp" type="email" style="min-width: 350px !important; width: 38%;" value="" disabled>
             </div>
         </div>
         <hr class="hr">
@@ -122,6 +122,15 @@
             <br><br>
             <textarea style="padding-left: 2px;" id="textarea-description"
                 placeholder="write your full project description here"></textarea>
+            <br><br>
+            <div class="upload-btn">
+                Upload a video related to your project: <br>
+                <div class="button-wrapvideo">
+                    <label class="button-video" for="upload-video">Upload File</label>
+                    <input type="file" id="upload-video" name="video" title="upload video">
+                </div>
+            </div>
+
 
         </div>
 
@@ -131,8 +140,8 @@
         </div>
         <hr class="hr">
         <div class="submission-guide">
-            Project Submission guidelines
-            <br><br>
+            <div id="s-guide"> Project Submission guidelines:- </div>
+            <br>
             <div id="submission-guidlines">
                 <li>Your project will be reviewed and rated in the nearest future. </li>
                 <li>Get suggestions and bug-checks here for free.</li>
@@ -163,161 +172,199 @@
     <style>
         .contact-heading {
             background-image: url(https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?cs=srgb&dl=pexels-fauxels-3183183.jpg&fm=jpg);
-            
+
         }
-            #work {
-                margin: 60px;
-                background-image: url('images/wood.jpg');
-                background-repeat: no-repeat;
-                background-attachment: local;
-                background-size: cover;
-                padding: 10px 0px;
-                margin-left: 60px;
-            }
 
-            .hr {
-                background: #644732;
-                height: 0.07px;
-            }
+        #work {
+            margin: 60px;
+            background-image: url('images/wood.jpg');
+            background-repeat: no-repeat;
+            background-attachment: local;
+            background-size: cover;
+            padding: 10px 0px;
+            margin-left: 60px;
+        }
 
-            #add-work {
-                text-align: center;
-                padding: 10px;
-                color: white;
-            }
+        .hr {
+            background: #644732;
+            height: 0.07px;
+        }
 
-            #submit-work {
-                padding-left: 40px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-                color: white;
-            }
+        #add-work {
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
 
-            #details {
-                padding-top: -2px;
-                position: relative;
-                margin-top: 1px;
-                margin-bottom: 10px;
-                text-align: center;
-            }
+        #submit-work {
+            padding-left: 40px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: white;
+        }
 
-            #select {
-                width: 417px;
-                height: 30px;
-            }
+        #details {
+            padding-top: -2px;
+            position: relative;
+            margin-top: 1px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
 
-            .gap-ph {
-                padding-left: 2px;
+        #select {
+            width: 417px;
+            height: 30px;
+        }
 
-            }
+        .gap-ph {
+            padding-left: 2px;
 
-            #excerpt {
-                padding-left: 40px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-                color: white;
-            }
+        }
 
-            #excerpt-content {
-                margin: 10px auto;
-                text-align: center;
-            }
+        #excerpt {
+            padding-left: 40px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: white;
+        }
 
-            .textarea {
+        #excerpt-content {
+            margin: 10px auto;
+            text-align: center;
+        }
 
-                width: 70%;
-                min-height: 50px;
-                outline: none;
-                resize: none;
-                overflow: auto;
-            }
+        .textarea {
+            width: 70%;
+            min-height: 50px;
+            outline: none;
+            resize: none;
+            overflow: auto;
+        }
 
-            #textarea-description {
-                width: 70%;
-                outline: none;
-                resize: none;
-                height: 250px;
-            }
+        #textarea-description {
+            width: 70%;
+            outline: none;
+            resize: none;
+            height: 250px;
+        }
 
-            #submission {
-                color: white;
-                padding-left: 40px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-            }
+        .upload-btn {
+            color: wheat;
+            margin: 40px;
 
-            #input-submit {
-                color: white;
-                padding-left: 40px;
-            }
+        }
 
-            p {
-                color: white;
-                padding-left: 40px;
-                margin-left: 20px;
-                font-size: 14px;
+        input[type="file"] {
+            position: absolute;
+            z-index: -1;
+            top: 10px;
+            margin-left: 35%;
+            font-size: 17px;
+            color: #b8b8b8;
 
-            }
+        }
 
-            #check-box {
-                margin-left: 20px;
-                position: relative;
-                width: 20px;
-                height: 20px;
-                cursor: pointer;
+        .button-wrapvideo {
+            position: relative;
+        }
 
-            }
+        .button-video {
+            display: inline-block;
+            padding: 12px 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: wheat;
+            font-size: 16px;
+            font-weight: 500;
+            color: #f33f3f;
+            margin-top: 10px;
+        }
 
-            #btn-style {
-                margin-left: 20px;
-                width: 60%;
-                margin-bottom: 40px;
-                padding: 6px;
-                border-radius: 4px;
-                color: white;
-                background-color: #f33f3f;
-                cursor: pointer;
-                text-align: center;
-            }
+        #submission {
+            color: white;
+            padding-left: 40px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
 
-            .btn-text-center {
-                text-align: center;
-            }
+        #input-submit {
+            color: white;
+            padding-left: 40px;
+        }
 
-            .submission-guide {
-                color: #f33f3f;
-                padding-left: 70px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-            }
+        p {
+            color: white;
+            padding-left: 40px;
+            margin-left: 20px;
+            font-size: 14px;
 
-            #submission-guidlines {
-                color: white;
-                padding-left: 7%;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                padding-right: 4%;
-            }
+        }
 
-            #first-p {
-                color: #f33f3f;
-                font-size: 30px;
-            }
+        #check-box {
+            margin-left: 20px;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
 
-            #second-p {
-                font-size: 20px;
-                color: black;
-            }
+        }
 
-            #footer-p {
-                color: black;
+        #btn-style {
+            margin-left: 20px;
+            width: 60%;
+            margin-bottom: 40px;
+            padding: 6px;
+            border-radius: 4px;
+            color: #f33f3f;
+            background-color: wheat;
+            cursor: pointer;
+            text-align: center;
+            font-weight: 600;
+        }
 
-            }
+        .btn-text-center {
+            text-align: center;
+        }
 
-            body {
-                background-image: url(https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-                background-position: inset;
-            }
+        .submission-guide {
+            color: wheat;
+            padding-left: 70px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #s-guide {
+            text-decoration: underline;
+
+        }
+
+        #submission-guidlines {
+            color: white;
+            padding-left: 7%;
+            padding-bottom: 10px;
+            padding-right: 4%;
+
+        }
+
+        #first-p {
+            color: #f33f3f;
+            font-size: 30px;
+        }
+
+        #second-p {
+            font-size: 20px;
+            color: black;
+        }
+
+        #footer-p {
+            color: black;
+
+        }
+
+        body {
+            background-image: url(https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-position: inset;
+        }
     </style>
 
 
@@ -326,9 +373,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="inner-content">
-                        <p id="footer-p">Copyright &copy; 2021 RatemyApp devjam co. ltd.
-
-                            <!-- <a rel="nofollow noopener" href="https://templatemo.com" target="_blank"></a> -->
+                        <p id="footer-p">Copyright &copy; 2021 RatemyApp devjam
                         </p>
                     </div>
                 </div>
