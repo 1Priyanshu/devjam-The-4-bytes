@@ -85,178 +85,239 @@
         <hr class="hr"><br>
         <div id="details">
             <div>
-                <input class="gap-ph" id="name" type="text" size="50" name="Project-name" placeholder="Project-name" required>
+                <input class="gap-ph" id="name" style="width: 38%;" type="text" name="Project-name"
+                    placeholder="Project-name" required>
             </div>
             <br>
             <div>
-                <input class="gap-ph" id="link" type="link" size="50" name="Project-link" placeholder="Add-Link" required>
+                <input class="gap-ph" id="link" style="width: 38%;" type="link" name="Project-link"
+                    placeholder="Add-Link" required>
             </div>
 
             <br><br>
 
             <div>
-                <select  class="gap-ph" id="select" name="type" >
+                <select class="gap-ph" id="select" style="width: 38%;" name="type">
                     <option disabled selected value> -- select an option -- </option>
                     <option>Coding</option>
-                    <option>Art</option>
-                    <option>Inovation</option>
+                    <option>Games</option>
+                    <option>Innovation</option>
+                    <option>Music</option>
                     <option>others</option>
                 </select>
             </div>
             <br>
             <div>
-                <input class="gap-hp" type="email" size="50" value="" disabled>
+                <input class="gap-hp" type="email" style="width: 38%;" value="" disabled>
             </div>
         </div>
         <hr class="hr">
         <div id="excerpt">
-            EXCERPT
+            DESCRIPTION
         </div>
         <hr class="hr">
         <div id="excerpt-content">
-              <textarea style="padding-left: 2px;" class="textarea" placeholder="write your work decription here"></textarea>
+            <textarea style="padding-left: 2px;" class="textarea" maxlength="100"
+                placeholder="write excerpt of your project here"></textarea>
+            <br><br>
+            <textarea style="padding-left: 2px;" id="textarea-description"
+                placeholder="write your full project description here"></textarea>
+
         </div>
-        
+
         <hr class="hr">
         <div id="submission">
             SUBMISSION
         </div>
         <hr class="hr">
-        <div id="input-submit" >
-        <input id="check-box" type="checkbox"> 
+        <div class="submission-guide">
+            Project Submission guidelines
+            <br><br>
+            <div id="submission-guidlines">
+                <li>Your project will be reviewed and rated in the nearest future. </li>
+                <li>Get suggestions and bug-checks here for free.</li>
+                <li>you can update your project anytime later. </li>
+                <li>content copying is strictly prohibited.</li>
+                <li>You can upload a video tutorial too, to brief your project. </li>
+            </div>
+        </div>
+        <div id="input-submit">
+            <input id="check-box" type="checkbox">
         </div>
         <p>I have read and understood the guidelines for submissions.</p>
         <br>
         <div class="btn-text-center">
-        <button id="btn-style" class="btn-style" type="button">SUBMIT</button>
+            <button id="btn-style" class="btn-style" type="button">SUBMIT</button>
         </div>
     </div>
     <hr>
     <br><br><br>
     <p id="first-p">
-    Thankyou for your contribution</p>
+        Thankyou for your contribution</p>
     <br>
     <p id="second-p">Stay connected to get the latest updates on your contribution</p>
     <br>
     <br>
-    
+
 
     <style>
-        #work {
-            margin: 60px;
-            background-image: url('images/wood.jpg');
-            background-repeat: no-repeat;
-            background-attachment: local;
-            background-size: cover;
-            padding: 10px 0px;
-            margin-left: 60px;
-        }
-       .hr{
-           background: #644732;
-           height: 0.07px;
-       }
-
-        #add-work {
-            text-align: center;
-            padding: 10px;
-            color: white;
-        }
-
-        #submit-work {
-            padding-left: 40px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            color: white;
-        }
-
-        #details {
-            padding-top: -2px;
-            position: relative;
-            margin-top: 1px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        #select {
-            width: 417px;
-            height: 30px;
-        }
-        .gap-ph{
-            padding-left: 2px;
-        }
-        #excerpt{
-            padding-left: 40px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            color: white;
-        }
-        #excerpt-content{
-            margin: 10px auto;
-            text-align: center;
-        }
-
-        .textarea{
-            
-            width: 70%;
-            min-height: 110px;
-            outline: none;
-            resize: none;
-        }
-        #submission{
-            color: white;
-            padding-left: 40px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-        #input-submit{
-            color: white;
-            padding-left: 40px;
-        }
-        p{
-            color: white;
-            padding-left: 40px;
-            margin-left: 20px;
-            font-size: 14px;
+        .contact-heading {
+            background-image: url(https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?cs=srgb&dl=pexels-fauxels-3183183.jpg&fm=jpg);
             
         }
-        #check-box{
-            margin-left: 20px;
-            position: relative;
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
+            #work {
+                margin: 60px;
+                background-image: url('images/wood.jpg');
+                background-repeat: no-repeat;
+                background-attachment: local;
+                background-size: cover;
+                padding: 10px 0px;
+                margin-left: 60px;
+            }
 
-        }
+            .hr {
+                background: #644732;
+                height: 0.07px;
+            }
 
-        #btn-style{
-            margin-left: 20px;
-            width: 60%;
-            margin-bottom: 40px;
-            padding: 6px;
-            border-radius: 4px;
-            color: white;
-            background-color:#f33f3f;
-            cursor: pointer;
-            text-align: center; 
-        }
-        .btn-text-center{
-	        text-align: center;
-        }
-        #first-p{
-            color: #f33f3f;
-            font-size: 30px;
-        }
-        #second-p{
-            font-size: 20px;
-            color: black;
-        }
-        #footer-p{
-            color: black;
+            #add-work {
+                text-align: center;
+                padding: 10px;
+                color: white;
+            }
 
-        }
-	    body{
-            background-image: url(https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-        }
+            #submit-work {
+                padding-left: 40px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                color: white;
+            }
+
+            #details {
+                padding-top: -2px;
+                position: relative;
+                margin-top: 1px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            #select {
+                width: 417px;
+                height: 30px;
+            }
+
+            .gap-ph {
+                padding-left: 2px;
+
+            }
+
+            #excerpt {
+                padding-left: 40px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                color: white;
+            }
+
+            #excerpt-content {
+                margin: 10px auto;
+                text-align: center;
+            }
+
+            .textarea {
+
+                width: 70%;
+                min-height: 50px;
+                outline: none;
+                resize: none;
+                overflow: auto;
+            }
+
+            #textarea-description {
+                width: 70%;
+                outline: none;
+                resize: none;
+                height: 250px;
+            }
+
+            #submission {
+                color: white;
+                padding-left: 40px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+            #input-submit {
+                color: white;
+                padding-left: 40px;
+            }
+
+            p {
+                color: white;
+                padding-left: 40px;
+                margin-left: 20px;
+                font-size: 14px;
+
+            }
+
+            #check-box {
+                margin-left: 20px;
+                position: relative;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+
+            }
+
+            #btn-style {
+                margin-left: 20px;
+                width: 60%;
+                margin-bottom: 40px;
+                padding: 6px;
+                border-radius: 4px;
+                color: white;
+                background-color: #f33f3f;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            .btn-text-center {
+                text-align: center;
+            }
+
+            .submission-guide {
+                color: #f33f3f;
+                padding-left: 70px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+            #submission-guidlines {
+                color: white;
+                padding-left: 7%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 4%;
+            }
+
+            #first-p {
+                color: #f33f3f;
+                font-size: 30px;
+            }
+
+            #second-p {
+                font-size: 20px;
+                color: black;
+            }
+
+            #footer-p {
+                color: black;
+
+            }
+
+            body {
+                background-image: url(https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+                background-position: inset;
+            }
     </style>
 
 
@@ -265,7 +326,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="inner-content">
-                        <p id="footer-p" >Copyright &copy; 2021 RatemyApp devjam co. ltd.
+                        <p id="footer-p">Copyright &copy; 2021 RatemyApp devjam co. ltd.
 
                             <!-- <a rel="nofollow noopener" href="https://templatemo.com" target="_blank"></a> -->
                         </p>
