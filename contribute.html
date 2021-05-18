@@ -12,11 +12,11 @@
 
     <title>Contribute</title>
 
-    <link href="templates/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href={% static "blog/bootstrap.min.css" %} rel="stylesheet">
 
-    <link rel="stylesheet" href="templates/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="templates/assets/css/templatemo-sixteen.css">
-    <link rel="stylesheet" href="templates/assets/css/owl.css">
+        <link rel="stylesheet" href={% static "blog/fontawesome.css" %}>
+    <link rel="stylesheet" href={% static "blog/templatemo-sixteen.css" %}>
+    <link rel="stylesheet" href={% static "blog/owl.css" %}>
 
 </head>
 
@@ -43,18 +43,18 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home
+                            <a class="nav-link" href={% url "home" %}>Home
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="products.html">Top Projects</a>
+                            <a class="nav-link" href={% url "top projects" %}>Top Projects</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="contact.html">Contribute</a>
+                            <a class="nav-link" href={% url "post-create" %}>Contribute</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">Profile</a>
+                            <a class="nav-link" href={% url "logout" %}>Profile</a>
                         </li>
 
                     </ul>
@@ -179,7 +179,7 @@
 
         #work {
             margin: 60px;
-            background-image: url('images/wood.jpg');
+            background-image: url('/static/blog/wood.jpeg');
             background-repeat: no-repeat;
             background-attachment: local;
             background-size: cover;
@@ -384,16 +384,16 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="templates/vendor/jquery/jquery.min.js"></script>
-    <script src="templates/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src={% static "blog/jquery.min.js" %}></script>
+    <script src={% static "blog/bootstrap.bundle.min.js"></script>
 
 
     <!-- Additional Scripts -->
-    <script src="templates/assets/js/custom.js"></script>
-    <script src="templates/assets/js/owl.js"></script>
-    <script src="templates/assets/js/slick.js"></script>
-    <script src="templates/assets/js/isotope.js"></script>
-    <script src="templates/assets/js/accordions.js"></script>
+    <script src={% static "blog/custom.js" %}></script>
+    <script src={% static "blog/owl.js" %}></script>
+    <script src={% static "blog/slick.js" %}></script>
+    <script src={% static "blog/isotope.js" %}></script>
+    <script src={% static "blog/accordions.js" %}></script>
 
     <script language="text/Javascript">
         cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
