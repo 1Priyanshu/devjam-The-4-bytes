@@ -54,10 +54,10 @@
                             <a class="nav-link" href="products.html">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">Contribute</a>
+                            <a class="nav-link" href="./contribute.html">Contribute</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="contact.html">Profile</a>
+                            <a class="nav-link" href="./profile.html">Profile</a>
                         </li>
                     </ul>
                 </div>
@@ -74,8 +74,9 @@
                 <div class="profile-nav-info">
                     <h3 class="user-name">Priyanshu upman</h3>
                     <div class="address">
-                        <p class="state">-Rajasthan
-                        </p>
+                        <i class="fas fa-map-marker-alt fa-lg"></i>
+                        <input class="state" placeholder="City, Country"> 
+                        </input>
                     </div>
                 </div>
                 <div class="profile-option">
@@ -89,14 +90,13 @@
             <div class="main-bd">
                 <div class="left-side">
                     <div class="profile-side">
-                        <p class="mobile-no"><i class="fa fa-phone"></i>+91876543XXXX</p>
+                        <p class="mobile-no"><i class="fa fa-phone"></i><input type="number" placeholder="Phone"></input> </p>
                         <p class="user-mail"><i class="fa fa-envelope"></i>hello123@gmail.com
                         </p>
                         <div class="user-bio">
                             <h5>Bio :-</h5>
                             <p class="bio">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita quo id inventore fuga
-                                eaque eligendi voluptatibus? Eaque, quod. Non, modi?
+                                <textarea placeholder="Add bio"></textarea>
                             </p>
                         </div>
                         <div class="profile-btn">
@@ -243,12 +243,25 @@
         .profile-nav-info .address {
             display: flex;
             font-weight: bold;
-            color: #777;
+            /* color: #777; */
+            /* background-color: #fff; */
+        }
+        .profile-nav-info .address i{
+            color: #f33f3f;
+            padding-top: 3px;
+            padding-right: 5px;
         }
 
-        .profile-nav-info .address p {
+
+        .profile-nav-info .address input {
             margin-right: 5px;
             font-size: 16px;
+            background-color: whitesmoke;
+            height: 26px;
+            border-radius: 10px;
+            border:  #fff;
+            padding: 5px;
+            padding-left: 10px;
         }
 
         .profile-option {
@@ -319,13 +332,35 @@
         .profile-side p {
             margin-bottom: 7px;
             color: #333;
-            font-size: 14px;
-           
+            font-size: 16px;
+        }
+
+        .profile-side p input {
+            background-color: whitesmoke;
+            height: 26px;
+            border-radius: 10px;
+            border:  #fff;
+            padding: 5px;
+            padding-left: 10px; 
         }
 
         .profile-side p i {
             color: var(--color);
             margin-right: 10px;
+        }
+
+        .profile-side .user-bio p textarea {
+            background-color: whitesmoke;
+            min-height: 150px;
+            border-radius: 10px;
+            border:  #fff;
+            padding: 5px;
+            padding-left: 10px; 
+            margin: 5px;
+            width: 250px;
+            resize: none;
+            overflow-y: auto;
+            
         }
 
         .mobile-no i {
@@ -513,20 +548,20 @@
 
 
 
-        let bio = document.querySelector('.bio');
+        // let bio = document.querySelector('.bio');
 
-        function bioText() {
-            bio.oldText = bio.innerText;
-            bio.innerText = bio.innerText.substring(0, 100) + "...";
-            bio.innerHTML += "&nbsp;" + `<span onclick='addLength()' id='see-more-bio'> See More</span>`;
-        }
-        bioText();
+        // function bioText() {
+        //     bio.oldText = bio.innerText;
+        //     bio.innerText = bio.innerText.substring(0, 100) + "...";
+        //     bio.innerHTML += "&nbsp;" + `<span onclick='addLength()' id='see-more-bio'> See More</span>`;
+        // }
+        // bioText();
 
-        function addLength() {
-            bio.innerHTML = bio.oldText;
-            bio.innerHTML += "&nbsp;" + `<span onclick='bioText()' id='see-less-bio'> See Less</span>`;
+        // function addLength() {
+        //     bio.innerHTML = bio.oldText;
+        //     bio.innerHTML += "&nbsp;" + `<span onclick='bioText()' id='see-less-bio'> See Less</span>`;
 
-        }
+        // }
 
 
     </script>
