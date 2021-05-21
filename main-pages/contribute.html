@@ -1,1 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <title>Contribute</title>
+
+    <link href="templates/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="templates/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="templates/assets/css/templatemo-sixteen.css">
+    <link rel="stylesheet" href="templates/assets/css/owl.css">
+
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <header class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <h2 id="webs-name"> <em>IMDevB</em></h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Top Projects</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./contribute.html">Contribute</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./profile.html">Profile</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-heading contact-heading header-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-content">
+                        <h2>Contribute</h2><br>
+                        <h4>Add your projects, Articles and other works and get reviewed and suggestions from our users.
+                        </h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="work">
+        <div id="add-work"> ADD WORK</div>
+        <hr class="hr">
+        <div id="submit-work">SUBMIT DETAILS</div>
+        <hr class="hr"><br>
+        <div id="details">
+            <div>
+                <input class="gap-ph" id="name"  type="title" 
+                    name="Project-name" placeholder="Project-name" required>
+                    
+            </div>
+            <br>
+            <div>
+                <input class="gap-ph" id="link"  type="link"
+                    name="Project-link" placeholder="Add-Link" required>
+                    
+            </div>
+
+            <br><br>
+
+            <div>
+                <select class="gap-ph" id="select"  name="type" style="min-width: 350px !important; width: 38%;"  >
+                    <option disabled selected value> -- select an option -- </option>
+                    <option>Open Source</option>
+                    <option>Private Source </option>
+                    
+                </select>
+            </div>
+            <br>
+            <div>
+                <input class="gap-hp" type="email"   value="" disabled>
+            </div>
+        </div>
+        <hr class="hr">
+        <div id="excerpt">
+            DESCRIPTION
+        </div>
+        <hr class="hr">
+        <div id="excerpt-content">
+            <textarea style="padding-left: 2px;" class="textarea" maxlength="100"
+                placeholder="write excerpt of your project here"></textarea>
+            <br><br>
+            <textarea style="padding-left: 2px;" id="textarea-description"
+                placeholder="write your full project description here"></textarea>
+            <br><br>
+            <div class="upload-btn">
+                Upload images related to your project: <br>
+                <div class="button-wrapimage">
+                    <form enctype="multipart/form-data">
+                    <label class="button-image" for="upload-image">Upload images</label>
+                    <input type="file" id="upload-image" name="video" title="upload image" multiple>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+        <hr class="hr">
+        <div id="submission">
+            SUBMISSION
+        </div>
+        <hr class="hr">
+        <div class="submission-guide">
+            <div id="s-guide"> Project Submission guidelines:- </div>
+            <br>
+            <div id="submission-guidlines">
+                <li>Your project will be reviewed and rated in the nearest future. </li>
+                <li>Get suggestions and bug-checks here for free.</li>
+                <li>you can update your project anytime later. </li>
+                <li>content copying is strictly prohibited.</li>
+                <li>You can upload images to show your project. </li>
+            </div>
+        </div>
+        <div id="input-submit">
+            <input id="check-box" type="checkbox">
+        </div>
+        <p>I have read and understood the guidelines for submissions.</p>
+        <br>
+        <div class="btn-text-center">
+            <button id="btn-style" class="btn-style" type="button">SUBMIT</button>
+        </div>
+    </div>
+    <hr>
+    <br><br><br>
+    <p id="first-p">
+        Thankyou for your contribution</p>
+    <br>
+    <p id="second-p">Stay connected to get the latest updates on your contribution</p>
+    <br>
+    <br>
+
+
+    <style>
+        .contact-heading {
+            background-image: url(https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?cs=srgb&dl=pexels-fauxels-3183183.jpg&fm=jpg);
+           
+        }
+
+        #work {
+            /* background-image: url('images/wood.jpg'); */
+            margin: 60px 100px;
+            background-color: rgb(253, 222, 168);
+            background-repeat: no-repeat;
+            background-attachment: local;
+            background-size: cover;
+            padding: 10px 0px;
+            border: 4px rgb(253, 217, 153) solid;
+            border-radius: 50px;
+        }
+        #webs-name{
+            text-transform: none !important;
+        }
+
+        .hr {
+            /* background: #644732; */
+            /* height: 0.07px; */
+            border: .5px solid #f33f3f;
+        }
+
+        #add-work {
+            text-align: center;
+            padding: 10px;
+            color: #333;
+            font-weight: 550;
+        }
+
+        #submit-work {
+            padding-left: 40px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: #333;
+            font-weight: 550;
+        }
+
+        #details {
+            padding-top: -2px;
+            position: relative;
+            margin-top: 1px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+
+        input[type="title"] {
+            min-width: 350px !important;
+             width: 38%; 
+        }
+        input[type="link"] {
+            min-width: 350px !important;
+             width: 38%; 
+        }
+        input[type="email"] {
+            min-width: 350px !important;
+             width: 38%; 
+        } 
+        
+
+        #select {
+            width: 417px;
+            height: 30px;
+        }
+
+        .gap-ph {
+            padding-left: 2px;
+
+        }
+
+        #excerpt {
+            padding-left: 40px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: #333;
+            font-weight: 550;
+        }
+
+        #excerpt-content {
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        .textarea {
+            width: 70%;
+            min-height: 50px;
+            outline: none;
+            resize: none;
+            overflow: auto;
+        }
+
+        #textarea-description {
+            width: 70%;
+            outline: none;
+            resize: none;
+            height: 250px;
+        }
+
+        .upload-btn {
+            color: #333;
+            margin: 40px;
+
+        }
+
+        input[type="file"] {
+            position: absolute;
+            z-index: -1;
+            top: 10px;
+            margin-left: 35%;
+            font-size: 17px;
+            color: #ebebeb;
+            visibility: hidden;
+
+        }
+
+        .button-wrapimage {
+            position: relative;
+        }
+
+        .button-image {
+            display: inline-block;
+            padding: 12px 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: rgba(288, 0, 70, 0.9);
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        #submission {
+            color: #333;
+            padding-left: 40px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-weight: 550;
+        }
+
+        #input-submit {
+            color: #333;
+            padding-left: 40px;
+        }
+
+        p {
+            color: #333;
+            padding-left: 40px;
+            margin-left: 20px;
+            font-size: 14px;
+
+        }
+
+        #check-box {
+            margin-left: 20px;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+
+        }
+
+        #btn-style {
+            margin-left: 20px;
+            width: 60%;
+            margin-bottom: 40px;
+            padding: 10px;
+            border-radius: 4px;
+            color: #fff;
+            background-color: rgba(288, 0, 70, 0.9);
+            cursor: pointer;
+            text-align: center;
+            font-weight: 500;
+            border:  black;
+        }
+
+        .btn-text-center {
+            text-align: center;
+        }
+
+        .submission-guide {
+            color: wheat;
+            padding-left: 70px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #s-guide {
+            text-decoration: underline;
+            color: #333;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        
+        button#btn-style:hover {
+            background-color: green;
+        }
+
+        #submission-guidlines {
+            color: #333;
+            padding-left: 7%;
+            padding-bottom: 10px;
+            padding-right: 4%;
+
+        }
+
+        #first-p {
+            color: #f33f3f;
+            font-size: 30px;
+        }
+
+        #second-p {
+            font-size: 20px;
+            color: black;
+        }
+
+        #footer-p {
+            color: black;
+            text-transform: none !important;
+
+        }
+
+        body {
+            /* background-image: url(https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-position: inset; */
+            background-image: url(./images/white.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-content">
+                        <p id="footer-p">Copyright &copy; 2021 IMDevB
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="templates/vendor/jquery/jquery.min.js"></script>
+    <script src="templates/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="templates/assets/js/custom.js"></script>
+    <script src="templates/assets/js/owl.js"></script>
+    <script src="templates/assets/js/slick.js"></script>
+    <script src="templates/assets/js/isotope.js"></script>
+    <script src="templates/assets/js/accordions.js"></script>
+
+    <script language="text/Javascript">
+        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+        function clearField(t) {                   //declaring the array outside of the
+            if (!cleared[t.id]) {                      // function makes it static and global
+                cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                t.value = '';         // with more chance of typos
+                t.style.color = '#fff';
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
