@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="ContactStyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navigation">
+        <ul id="list">
+            <li class="option"><a href="{% url 'blog-about' %}">About Us</a></li>
+            <li class="option"><a href="{% url 'home' %}">Home</a></li>
+            <li class="option"><a href="{% url 'register' %}">Register</a></li>
+        </ul>
+    </nav>
+        <h1 class="mainheading">Get In Touch!</h1>
+        <main>
+            <ul class="box">
+                <li id="Phone">
+                    <ul>
+                        <li><img src="https://web-assets.domo.com/miyagi/images/icon/domo-icon/domo-icon-iphone-mobile-brand-gradient.svg" alt=""></li>
+                        <li  id="ContactUs">Contact Us</li>
+                        <li  id="GroupLeader" >Group Leader</li>
+                        <li id="GroupLeaderNo">+91 83095 10316</li>
+                        <li id="Bhuvnesh">Project Coordinator</li>
+                        <li id="BhuvneshNo">+91 90274 80817</li>
+                    </ul>
+                </li>
+                <li id="Location">
+                    <ul>
+                        <li><img src="https://web-assets.domo.com/miyagi/images/icon/domo-icon/domo-icon-navigation-location-drop-pin-map-2-brand-gradient.svg" alt=""></li>
+                        <li id="ComeSeeUs">Come See Us</li>
+                        <li id="address">Barrister Mullah Colony, <br> MNNIT Allahabad Campus, <br> Teliarganj, Prayagraj,<br> Uttar Pradesh-211004</li>
+                    </ul>
+                </li>
+                <li id="Map">
+                    <ul>
+                        <li id="addressmap"><img src="/static/blog/mapphoto.jpeg" alt=""></li>
+                    </ul>
+                </li>
+            </ul>
+        </main>
+        <div class="footerbar">
+            <ul id="leftthings">
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of Use</a></li>
+                <li id="copyright">&#169; 2021 Key.All Rights Reserved</li>
+        </div>
+</body>
+</html>
+
+<style>
+
+body{
+    font-family: 'Quattrocento Sans';
+    background-color: black;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+nav a{
+    color: white;
+    font-size: 21px;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+
+nav li{
+    list-style-type: none;
+}
+
+#list{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.option{
+    padding: 10px;
+    margin-top: 7px;
+    margin-right: 48px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.mainheading{
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+    top: 5px;
+    color: #fb9000;
+    font-size: 50px;
+    font-weight: bold;
+}
+#Phone{
+    position: absolute;
+    top: 220px;
+    left: 330px;
+}
+
+#Phone ul li img{
+    width: 60px;
+}
+
+
+
+#ContactUs{
+    line-height: 50px;
+    font-size: 42px;
+    position: relative;
+    left: -51px;
+    color: #fb9000;
+}
+
+#GroupLeader,#GroupLeaderNo{
+    color: white;
+    line-height: 38px;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    left: -30px;
+    letter-spacing: 1px;
+}
+
+#GroupLeaderNo{
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    line-height: 42px;
+    position: relative;
+    left: -19px;
+}
+#Bhuvnesh,#BhuvneshNo{
+    color: white;
+    line-height: 47px;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    left: -60px;
+    letter-spacing: 1px;
+}
+#BhuvneshNo{
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    line-height: 35px;
+    position: relative;
+    left: -19px;
+}
+
+#Location ul li img{
+    width: 60px;
+}
+
+#Location{
+    position: absolute;
+    top: 214px;
+    left: 722px;
+}
+
+#ComeSeeUs{
+    line-height: 50px;
+    font-size: 42px;
+    position: relative;
+    left: -77px;
+    color: #fb9000;
+}
+#address{
+    color: white;
+    font-size: 22px;
+    letter-spacing: 0px;
+    font-weight: normal;
+    line-height: 31px;
+    position: relative;
+    left: -65px;
+}
+#Map{
+    position: absolute;
+    top: 165px;
+    left: 976px;
+}
+#addressmap img{
+    width: 340px;
+    padding: 0;
+    border: 5px solid #fb9000;
+    border-radius: 300px;
+}
+
+#leftthings{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 615px;
+}
+
+#leftthings li a{
+    color: white;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 56px;
+    font-size: 22px;
+}
+
+#copyright{
+    padding-left: 50px;
+    position: relative;
+    left: 442px;
+    font-weight: normal;
+    font-size: 22px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+
+</style>

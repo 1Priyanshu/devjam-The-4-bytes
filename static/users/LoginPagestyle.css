@@ -1,0 +1,169 @@
+
+body{
+    font-family: 'Quattrocento Sans';
+    background-image: url('https://techstart.fremontedc.com/wp-content/uploads/Paralax-Home-Background-3.jpg');
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+}
+nav a{
+    color: white;
+    font-size: 21px;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+#list{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.option{
+    padding: 10px;
+    margin-top: 7px;
+    margin-right: 48px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+#MainCenter{
+    width: 415px;
+    height: auto;
+    position: absolute;
+    left: 37%;
+    top: 17%;
+}
+
+.LoginTitle{
+    color: white;
+    letter-spacing: 3px;
+    font-weight: normal;
+    font-size: 50px;
+    border-bottom: 7px solid #fc636b;
+    box-sizing: border-box;
+    padding-bottom: 6px;
+    margin-bottom: 36px;
+}
+#UsernameBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 35px;
+    background-color: rgba(255, 255,255, 0.17);
+    color: white;
+    padding: 2px 10px 2px 17px ;
+}
+#UsernameBox input{
+    position: relative;
+    top: 9px;
+    padding-left: 17px ;
+    color: #ddd;
+    font-size: 20px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+::placeholder{  /*to edit placeholder */
+    color: white;
+    opacity: 0.65;
+    letter-spacing: 1px;
+}
+
+#PasswordBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 23px;
+    border-radius: 35px;
+    background-color: rgba(255, 255,255, 0.17);
+    color: white;
+    padding: 2px 10px 2px 17px ;
+}
+
+#PasswordBox input{
+    position: relative;
+    top: 9px;
+    padding-left: 17px ;
+    color: #ddd;
+    font-size: 20px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+#btn{
+    width: 100%;
+    margin-top: 35px;
+    border-radius: 25px;
+    padding: 16px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: white;
+    background-color: #fc636b;
+    border: none;
+    cursor: pointer;
+}
+
+.extras{
+
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px ;
+    position: relative;
+    right: 14px;
+}
+.extras li a{
+    color: white;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.footerbar{
+    position: absolute;
+    left: -525px;
+    margin-top: 100px;
+}
+
+#leftthings{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#leftthings li a{
+    color: white;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 56px;
+    font-size: 22px;
+}
+
+#copyright{
+    padding-left: 50px;
+    position: relative;
+    left: 442px;
+    font-weight: normal;
+    font-size: 22px;
+    color: white;
+    letter-spacing: 1px;
+}
+

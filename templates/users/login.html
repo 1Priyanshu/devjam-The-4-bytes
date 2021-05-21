@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginPage</title>
+    <link rel="stylesheet" href= {% static "users/LoginPagestyle.css" %}>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+    <div class="col-md-8">
+        {% if messages %}
+          {%for message in messages%}
+            <div class="alert alert-{{ message.tags}}">
+            {{message}}
+            </div>
+            {%endfor%}
+        {% endif %}
+        {% block content %}{% endblock %}
+      </div>
+    <nav id="navigation">
+        <ul id="list">
+            <li class="option"><a href="">Contact</a></li>
+            <li class="option"><a href="">About Us</a></li>
+            <li class="option"><a href="">Register</a></li>
+        </ul>
+    </nav>
+    <main id="MainCenter">
+        <h1 class="LoginTitle">Login</h1>
+        <form method = "POST" action="">
+            {% csrf_token %}
+            <div id="UsernameBox">
+                <span><i class="fas fa-user" ></i></span>
+                {{ form.username }}
+            </div>
+            <div id="PasswordBox">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                {{ form.password }}
+            </div>
+            <div>
+                <input type="submit" id="btn" value="GET STARTED">
+            </div>
+        </form>
+        <ul class="extras">
+            <li id="CreateAccount"><a href={% url "register" %}>CREATE ACCOUNT</a></li>
+            <li id="Help"><a href="">NEED HELP?</a></li>
+        </ul>
+        <div class="footerbar">
+            <ul id="leftthings">
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of Use</a></li>
+                <li id="copyright">&#169; 2021 Key.All Rights Reserved</li>
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+    var form_fields=document.getElementsByTagName('input')
+    form_fields[1].placeholder='Username'
+    form_fields[2].placeholder='Password'
+
+
+
+</script>
+
+
+

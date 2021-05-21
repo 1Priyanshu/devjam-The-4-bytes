@@ -1,0 +1,430 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+    rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/bd87bcb52d.js" crossorigin="anonymous"></script>
+
+  <title>IMDevB-REVIEW</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href={% static 'blog/bootstrap.min.css' %} rel="stylesheet">
+
+  <link rel="stylesheet" href={% static "blog/fontawesome.css" %}>
+  <link rel="stylesheet" href={% static "blog/templatemo-sixteen.css" %}>
+  <link rel="stylesheet" href={% static "blog/owl.css" %}>
+
+ 
+
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- Header -->
+  <header class="">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">
+          <h2>rate my<em> project</em></h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home' %}">Home
+                <span class="sr-only">Project</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Top Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'post-create' %}">Contribute</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'blog-about' %}">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="">Project Detail</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Content -->
+  <div class="page-heading contact-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-content">
+            <h4></h4>
+            <h2>Review my Project</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="find-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>{{object.Project_name}}</h2>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+        
+            <image src='{{object.Image.url}}' width="100%" height="330px" frameborder="0" style="border:0" allowfullscreen></image>
+            <div class="project-link"> Visit:<a href="{{object.Link}}" > {{object.Link}}</a></div>
+            <form action="{% url 'upvote' post.id %}" method = "POST">
+              {% csrf_token %}
+            <div id="upvote">
+              <span class="badge badge-pill badge-primary">Upvote  </span>
+              <button type="submit" class="btn btn-primary" name='post_id' value="{{post.id}}">
+                <i class="fas fa-chevron-circle-up"></i>  {{object.totalupvotes}}
+                <span class="sr-only">unread messages</span>
+              </button></div></form>
+
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="left-content">
+            <!-- <h4>by Name of the person</h4> -->
+            <h5>DESCRIPTOIN </h5> <br>
+            <div id="description-box">
+              {{object.Content}}<br><br>
+            </div>
+            <div id="social-icons">
+              <ul class="social-icons">
+                Join me On: &nbsp;&nbsp;
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="send-message">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Leave a comment</h2>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="contact-form">
+            <form id="contact" action="" method="post">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <fieldset>
+                    <input name="email" type="text" class="form-control" id="email" placeholder="E-Mail Address"
+                      required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <fieldset>
+                    <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject"
+                      required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message"
+                      required=""></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="filled-button">Submit</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="container mt-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-8">
+              <div class="headings d-flex justify-content-between align-items-center mb-3">
+                <h5>Unread comments(6)</h5>
+                <div class="buttons"> <span class="badge bg-white d-flex flex-row align-items-center"> <span
+                      class="text-primary">Comments "ON"</span>
+                    <div class="form-check form-switch"> <input class="form-check-input" type="checkbox"
+                        id="flexSwitchCheckChecked" checked> </div>
+                  </span> </div>
+              </div>
+              <div class="card p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="user d-flex flex-row align-items-center"> <img src="https://i.imgur.com/hczKIze.jpg"
+                      width="30" class="user-img rounded-circle mr-2"> <span><small
+                        class="font-weight-bold text-primary">james_olesenn</small> <small class="font-weight-bold">Hmm,
+                        This poster looks cool</small></span> </div> <small>2 days ago</small>
+                </div>
+                <div class="action d-flex justify-content-between mt-2 align-items-center">
+                  <div class="reply px-4"> <small>Remove</small> <span class="dots"></span> <small>Reply</small> <span
+                      class="dots"></span> <small>Translate</small> </div>
+                  <div class="icons align-items-center"> <i class="fa fa-star text-warning"></i> <i
+                      class="fa fa-check-circle-o check-icon"></i> </div>
+                </div>
+              </div>
+              <div class="card p-3 mt-2">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="user d-flex flex-row align-items-center"> <img src="https://i.imgur.com/C4egmYM.jpg"
+                      width="30" class="user-img rounded-circle mr-2"> <span><small
+                        class="font-weight-bold text-primary">olan_sams</small> <small class="font-weight-bold">Loving
+                        your work and profile! </small></span> </div> <small>3 days ago</small>
+                </div>
+                <div class="action d-flex justify-content-between mt-2 align-items-center">
+                  <div class="reply px-4"> <small>Remove</small> <span class="dots"></span> <small>Reply</small> <span
+                      class="dots"></span> <small>Translate</small> </div>
+                  <div class="icons align-items-center"> <i class="fa fa-check-circle-o check-icon text-primary"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="card p-3 mt-2">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="user d-flex flex-row align-items-center"> <img src="https://i.imgur.com/0LKZQYM.jpg"
+                      width="30" class="user-img rounded-circle mr-2"> <span><small
+                        class="font-weight-bold text-primary">rashida_jones</small> <small
+                        class="font-weight-bold">Really cool Which filter are you using? </small></span> </div> <small>3
+                    days ago</small>
+                </div>
+                <div class="action d-flex justify-content-between mt-2 align-items-center">
+                  <div class="reply px-4"> <small>Remove</small> <span class="dots"></span> <small>Reply</small> <span
+                      class="dots"></span> <small>Translate</small> </div>
+                  <div class="icons align-items-center"> <i class="fa fa-user-plus text-muted"></i> <i
+                      class="fa fa-star-o text-muted"></i> <i class="fa fa-check-circle-o check-icon text-primary"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="card p-3 mt-2">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="user d-flex flex-row align-items-center"> <img src="https://i.imgur.com/ZSkeqnd.jpg"
+                      width="30" class="user-img rounded-circle mr-2"> <span><small
+                        class="font-weight-bold text-primary">simona_rnasi</small> <small
+                        class="font-weight-bold text-primary">@macky_lones</small> <small
+                        class="font-weight-bold text-primary">@rashida_jones</small> <small
+                        class="font-weight-bold">Thanks </small></span> </div> <small>3 days ago</small>
+                </div>
+                <div class="action d-flex justify-content-between mt-2 align-items-center">
+                  <div class="reply px-4"> <small>Remove</small> <span class="dots"></span> <small>Reply</small> <span
+                      class="dots"></span> <small>Translate</small> </div>
+                  <div class="icons align-items-center"> <i class="fa fa-check-circle-o check-icon text-primary"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src={% static "blog/jquery.min.js" %}></script>
+        <script src={% static "blog/bootstrap.bundle.min.js" %}></script>
+    
+    
+        <!-- Additional Scripts -->
+        <script src={% static "blog/custom.js" %}></script>
+        <script src={% static "blog/owl.js" %}></script>
+        <script src={% static "blog/slick.js" %}></script>
+        <script src={% static "blog/isotope.js" %}></script>
+        <script src={% static "blog/accordions.js" %}></script>
+
+
+        <script language="text/Javascript">
+          cleared[0] = cleared[1] = cleared[2] = 0; 
+          function clearField(t) {                   
+            if (!cleared[t.id]) {                      
+              cleared[t.id] = 1;  
+              t.value = '';         
+              t.style.color = '#fff';
+            }
+          }
+        </script>
+
+</body>
+
+</html>
+
+<style>
+
+
+
+
+  .contact-heading {
+    background-image: url("/static/blog/detail.jpg");
+  }
+
+  .card {
+    border: none;
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    border-radius: 4px
+  }
+
+  .dots {
+    height: 4px;
+    width: 4px;
+    margin-bottom: 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block
+  }
+
+  .badge {
+    padding: 7px;
+    padding-right: 9px;
+    padding-left: 16px;
+    box-shadow: 5px 6px 6px 2px #e9ecef
+  }
+
+  .user-img {
+    margin-top: 4px
+  }
+
+  .check-icon {
+    font-size: 17px;
+    color: #c3bfbf;
+    top: 1px;
+    position: relative;
+    margin-left: 3px
+  }
+
+  .form-check-input {
+    margin-top: 6px;
+    margin-left: -24px !important;
+    cursor: pointer
+  }
+
+  .form-check-input:focus {
+    box-shadow: none
+  }
+
+  .icons i {
+    margin-left: 8px
+  }
+
+  .reply {
+    margin-left: 12px
+  }
+
+  .reply small {
+    color: #b7b4b4
+  }
+
+  .reply small:hover {
+    color: green;
+    cursor: pointer
+  }
+  #map {
+    
+    height: 460px;
+  }
+
+  .image-place {
+    height: 330px;
+    width: 100%;
+    
+    margin-top: -40px;
+    background-color: rgb(228, 228, 228);
+    
+  }
+
+  .col-md-4 {
+    
+    height: 500px;
+    margin-top: -40px;
+
+
+  }
+
+  #social-icons {
+    
+    padding: 5px;
+    margin: 20px 0px 20px -30px;
+  }
+
+  #description-box {
+    
+    height: 350px;
+    overflow-y: auto;
+    margin: -10px -16px 0px -30px;
+    font-size: 14px;
+    
+  }
+
+  .project-link {
+    
+    width: 200px;
+    margin: 10px;
+    height: 50px;
+    padding: 12px 16px;
+  }
+
+  
+  .btn-upvote {
+    background-color: #fff;
+    border: none;
+    color: black;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+  .btn-upvote :hover {
+    color: #f33;
+  }
+
+  #upvote{
+    
+    float: left;
+    margin: 10px;
+   padding-left: 10px;
+    height: 50px;
+    margin-left: 80%;
+    margin-top: -60px;
+  }
+</style>

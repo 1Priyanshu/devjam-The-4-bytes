@@ -1,0 +1,30 @@
+
+{% load crispy_forms_tags %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTA-8">
+        <meta name="viewpoint" content="width-device-width, initial scale-1.0">
+        <style>
+            #op{
+                background-color:rgb(173, 173, 173);
+            }
+        </style>
+        <title>none</title>
+    </head>
+    {% if user.is_authenticated %}
+    <div class ="content-section" id="op">
+        <form method="POST">
+           {% csrf_token  %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Add Review</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Post</button>
+        </form> 
+        </div>
+    </div>
+    {% endif %}
+{% endblock content %}

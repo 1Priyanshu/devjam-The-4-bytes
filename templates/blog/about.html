@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="AboutUsStyle.css">
+</head>
+<body>
+    <nav id="navigation">
+        <ul id="list">
+            <li class="option"><a href="{% url 'contact' %}">Contact</a></li>
+            <li class="option"><a href="{% url 'home' %}">Home</a></li>
+            <li class="option"><a href="{% url 'profile' %}">Profile</a></li>
+        </ul>
+    </nav>
+    <main>
+        <span class="box">
+             <ul id="theteam">
+                <li>The</li>
+                <li id="team" style="font-weight: 900; color: #fc636b;">TEAM</li>
+        </ul> 
+    </span>
+    <span class="paragraph">Our full-stack development team works <br> collaboratively to produce exceptional code.<br> An agile, iterative method means dev work happens <br> efficiently and with best practice in web standards as our <br>top-of-mind, tip-of-fingers priority.</span>
+    <div class="listofmembers">
+        <ul>
+            <li id="Yatharth">
+                <img src="https://www.6tematik.fr/application/files/5315/3596/5784/caricature-sam.svg" alt="">
+            </li>
+            <li id="YatharthName"><i>Yatharth</i> <br> Frontend Guy</li>
+            <li id="Harsha">
+                <img src="https://www.6tematik.fr/application/files/6715/9903/6787/caricature-quentin_g.svg" alt="">
+            </li>
+            <li id="HarshaName"><i>Harsha</i> <br>Frontend Guy</li>
+            <li id="Priyanshu">
+                <img src="https://www.6tematik.fr/application/files/1115/3596/5763/caricature-dimitri.svg" alt="">
+            </li>
+            <li id="PriyanshuName"><i>Priyanshu</i><br>Frontend Guy</li>
+            <li id="Bhuvnesh">
+                <img src="https://www.6tematik.fr/application/files/9515/3596/5781/caricature-quentin_b.svg" alt="">
+            </li>
+            <li id="BhuvneshName"><i>Bhuvnesh</i><br>Backend Guy</li>
+        </ul>
+    </div>
+    </main>
+</body>
+</html>
+
+
+
+<style>
+
+body{
+    font-family: 'Quattrocento Sans';
+    background-image: url('https://wallpaperaccess.com/full/1386514.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+nav a{
+    color: white;
+    font-size: 21px;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+#list{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.option{
+    padding: 10px;
+    margin-top: 7px;
+    margin-right: 48px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.box{
+    position: absolute;
+    top: 18%;
+    left: 22%;
+    border: 8px solid white;
+    padding: 129px 129px 0px 0px;
+}
+
+#theteam li{
+    list-style: none;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+.paragraph{
+    color: #bcbbcc;
+    position: absolute;
+    top: 25%;
+    left: 49%;
+    font-size: 27px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    line-height: 36px;
+}
+
+#Yatharth img{
+    position: absolute;
+    left: 4%;
+    top: 67%;
+    width: 9%;
+}
+
+#YatharthName{
+    color: white;
+    position: absolute;
+    top: 75%;
+    left: 14%;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 1px;
+}
+
+#Harsha img{
+    position: absolute;
+    left: 26%;
+    top: 67%;
+    width: 9%;
+}
+
+#HarshaName{
+    color: white;
+    position: absolute;
+    top: 75%;
+    left: 37%;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 1px;
+}
+
+#Priyanshu img{
+    position: absolute;
+    left: 48%;
+    top: 68%;
+    width: 10%;
+}
+
+#PriyanshuName{
+    color: white;
+    position: absolute;
+    top: 75%;
+    left: 59%;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 1px;
+}
+
+#Bhuvnesh img{
+    position: absolute;
+    left: 70%;
+    top: 68%;
+    width: 10%;
+}
+
+#BhuvneshName{
+    color: white;
+    position: absolute;
+    top: 75%;
+    left: 81%;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 1px;
+}
+
+</style>
