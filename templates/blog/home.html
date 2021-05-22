@@ -137,11 +137,13 @@ https://templatemo.com/tm-546-sixteen-clothing
                 <p>{{post.Brief}}</p>
                 <ul class="stars">
                   <li></li>
-                  <li>Total Upvotes<i class="fas fa-chevron-circle-up"></i></li>
-                  <li>></li>
+                  <li id="badge-pill">Public</li>
+                  <li></li>
+		  <li></li>
+		  <li></li>
                 </ul>
                 <span>{{post.dateposted|date:"F d, Y"}}</span>
-                <small>{{post.totalupvotes}}</small>
+                <small style="font-size: 16px;"><i class="fas fa-chevron-circle-up fa-lg" style="font-size: 26px; color: #1E90FF;"></i>&nbsp;{{post.totalupvotes}}</small>
               </div>
             </div>
           </div>
@@ -300,5 +302,16 @@ https://templatemo.com/tm-546-sixteen-clothing
 .owl-banner .owl-dots .owl-dot.active {
     background-color: #fff;
     opacity: 1;
+}
+	
+ #badge-pill {
+  background-color: #f33f3f;
+  border: none;
+  color: black;
+  padding: 6px 16px;
+  text-align: center;
+  display: inline-block;
+  margin: 12px 0px;
+  border-radius: 16px;
 }
 </style>
