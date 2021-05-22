@@ -92,15 +92,10 @@
     </div>
   </div>
    
-   <div class="find-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading">
-                        <h2>{{object.Project_name}}</h2>
-                        <hr>
+                    <div class="project-name">
+                        <h2 >{{object.Project_name}}</h2>
                     </div>
-                </div>
+                     <hr>
 
                 <div class="image">
                     <image src='{{object.Image.url}}' frameborder="0" style="border:0" allowfullscreen></image>
@@ -362,6 +357,11 @@
     color: green;
     cursor: pointer
   }
+  
+  .project-name {
+        margin: 20px;
+        margin-left: 40px; 
+    }
   .image {
         border: 1px solid #333;
         width: 55%;
